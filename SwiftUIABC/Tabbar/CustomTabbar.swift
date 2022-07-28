@@ -94,6 +94,10 @@ enum Tab : String, CaseIterable {
     }
 }
 struct BottomCurve: Shape {
+    var animatableData: CGFloat {
+        get { return centerX }
+        set { centerX = newValue }
+    }
     var centerX : CGFloat
     func path(in rect: CGRect) -> Path {
         print("centerX: \(centerX)")
