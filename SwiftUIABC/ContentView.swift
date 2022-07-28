@@ -9,9 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @Namespace var menuEffect
-    var menu : [String] = [ "Home", "HScroll", "Pie Chart", "Save Cards", "Settings", "Help"]
+    var menu : [String] = [ "Home", "HScroll", "Pie Chart", "Crypto", "Settings", "Help"]
     @State var tabSelected : Int = 0
     @State var isShow : Bool = false
+    @State var showSpotlight : Bool = false
+    @State var currentSpot : Int = 0
     init(){
         UITabBar.appearance().isHidden = true
     }
@@ -93,9 +95,7 @@ struct ContentView: View {
                 
             }
         }
-        
-        
-        
+        .addSpotlightOverlay($showSpotlight, currentSpot: $currentSpot)
         
     }
     
@@ -120,6 +120,7 @@ struct MenuView : View {
                             .foregroundColor(.black)
                             .frame(width: 20, height: 20)
                     }
+                    .addSpotlight(0, shape: .rectangle, roudedRadius: 0, text: "Open menu")
                     Spacer()
                     Text("Home").font(.system(size: 22).bold())
                     Spacer()
@@ -128,6 +129,7 @@ struct MenuView : View {
                     })
                         .frame(width: 35, height: 35)
                         .clipShape(Circle()).opacity(isShow ? 0 : 1)
+                        .addSpotlight(1, shape: .circle, roudedRadius: 0, text: "Avatar")
                 }
                 .frame(height: 35)
                 .padding(.horizontal)
@@ -136,7 +138,7 @@ struct MenuView : View {
                     MainView().tag(0)
                     PagingView().tag(1)
                     PieChartView().tag(2)
-                    Text("Save Cards").tag(3)
+                    CryptoView().tag(3)
                     Text("Settings").tag(4)
                     Text("Help").tag(5)
                 }

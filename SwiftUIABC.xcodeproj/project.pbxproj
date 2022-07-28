@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E022E98286E8C2B004BD72C /* waterSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E022E97286E8C2B004BD72C /* waterSliderView.swift */; };
+		8E0B5914288A3DBE00E0FD19 /* CryptoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0B5913288A3DBE00E0FD19 /* CryptoView.swift */; };
 		8E29DAFA285323D900CABE62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E29DAF9285323D900CABE62 /* AppDelegate.swift */; };
 		8E29DAFC285323D900CABE62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E29DAFB285323D900CABE62 /* SceneDelegate.swift */; };
 		8E29DAFE285323D900CABE62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E29DAFD285323D900CABE62 /* ViewController.swift */; };
@@ -26,6 +28,8 @@
 		8E671FC3286020C80039C98B /* CardShimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E671FC2286020C80039C98B /* CardShimmer.swift */; };
 		8E671FC528604CB10039C98B /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E671FC428604CB10039C98B /* TimerView.swift */; };
 		8E671FC728605B6B0039C98B /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E671FC628605B6B0039C98B /* PieChartView.swift */; };
+		8EDD28072887DAC800DE9DF2 /* Spotlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD28062887DAC800DE9DF2 /* Spotlight.swift */; };
+		8EDD280928892E3300DE9DF2 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD280828892E3300DE9DF2 /* LineGraph.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E022E97286E8C2B004BD72C /* waterSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waterSliderView.swift; sourceTree = "<group>"; };
+		8E0B5913288A3DBE00E0FD19 /* CryptoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoView.swift; sourceTree = "<group>"; };
 		8E29DAF6285323D900CABE62 /* SwiftUIABC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIABC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E29DAF9285323D900CABE62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E29DAFB285323D900CABE62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +75,8 @@
 		8E671FC2286020C80039C98B /* CardShimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardShimmer.swift; sourceTree = "<group>"; };
 		8E671FC428604CB10039C98B /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		8E671FC628605B6B0039C98B /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		8EDD28062887DAC800DE9DF2 /* Spotlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotlight.swift; sourceTree = "<group>"; };
+		8EDD280828892E3300DE9DF2 /* LineGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,7 @@
 		8E29DAF8285323D900CABE62 /* SwiftUIABC */ = {
 			isa = PBXGroup;
 			children = (
+				8EDD28052887DA9D00DE9DF2 /* Helpers */,
 				8E29DB302859BD9300CABE62 /* Tabbar */,
 				8E29DB2D2859B0EF00CABE62 /* View */,
 				8E29DAF9285323D900CABE62 /* AppDelegate.swift */,
@@ -161,6 +170,8 @@
 				8E29DB332859BF6F00CABE62 /* HomeView.swift */,
 				8E671FC428604CB10039C98B /* TimerView.swift */,
 				8E671FC628605B6B0039C98B /* PieChartView.swift */,
+				8E022E97286E8C2B004BD72C /* waterSliderView.swift */,
+				8E0B5913288A3DBE00E0FD19 /* CryptoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,6 +182,15 @@
 				8E29DB312859BDA900CABE62 /* CustomTabbar.swift */,
 			);
 			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		8EDD28052887DA9D00DE9DF2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8EDD28062887DAC800DE9DF2 /* Spotlight.swift */,
+				8EDD280828892E3300DE9DF2 /* LineGraph.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,16 +325,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E671FC528604CB10039C98B /* TimerView.swift in Sources */,
+				8E022E98286E8C2B004BD72C /* waterSliderView.swift in Sources */,
 				8E29DB322859BDA900CABE62 /* CustomTabbar.swift in Sources */,
 				8E671FC728605B6B0039C98B /* PieChartView.swift in Sources */,
+				8EDD280928892E3300DE9DF2 /* LineGraph.swift in Sources */,
 				8E29DB342859BF6F00CABE62 /* HomeView.swift in Sources */,
 				8E29DAFE285323D900CABE62 /* ViewController.swift in Sources */,
 				8E671FBF285C28180039C98B /* extension.swift in Sources */,
 				8E29DAFA285323D900CABE62 /* AppDelegate.swift in Sources */,
+				8E0B5914288A3DBE00E0FD19 /* CryptoView.swift in Sources */,
 				8E29DB36285AF9F100CABE62 /* PagingView.swift in Sources */,
 				8E671FC1285C6C550039C98B /* NetworkImage.swift in Sources */,
 				8E29DB2A2853244D00CABE62 /* ContentView.swift in Sources */,
 				8E29DB2F2859B10100CABE62 /* MainView.swift in Sources */,
+				8EDD28072887DAC800DE9DF2 /* Spotlight.swift in Sources */,
 				8E671FC3286020C80039C98B /* CardShimmer.swift in Sources */,
 				8E29DAFC285323D900CABE62 /* SceneDelegate.swift in Sources */,
 			);
@@ -491,8 +515,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VN57CT28VK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftUIABC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -505,8 +531,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = truc.SwiftUIABC;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.ftel.cmr.camera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = Personal_profile_Camera;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -518,8 +545,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VN57CT28VK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftUIABC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -532,8 +561,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = truc.SwiftUIABC;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.ftel.cmr.camera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = Personal_profile_Camera;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

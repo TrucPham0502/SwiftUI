@@ -17,9 +17,18 @@ struct HomeView: View {
                     GridItem(.flexible())
                 ], spacing: 10) {
                     ForEach(0..<50, id: \.self){item in
-                        NetworkImage(url: URL(string: "https://picsum.photos/200/200?id=\(item)"), placeholder: {
-                            CardShimmer()
-                        }).cornerRadius(10)
+                        if item == 2 {
+                            NetworkImage(url: URL(string: "https://picsum.photos/200/200?id=\(item)"), placeholder: {
+                                CardShimmer()
+                            }).cornerRadius(10)
+                                .addSpotlight(2, shape: .rounded, roudedRadius: 10, text: "GridView Photo random from https://picsum.photos")
+                        }
+                        else {
+                            NetworkImage(url: URL(string: "https://picsum.photos/200/200?id=\(item)"), placeholder: {
+                                CardShimmer()
+                            }).cornerRadius(10)
+                        }
+                        
                     }
                 }.padding(.bottom, 70)
             }.padding()

@@ -9,7 +9,11 @@ import Combine
 import SwiftUI
 struct NetworkImage<Content : View> : View {
     @StateObject private var viewModel = NetworkImageViewModel()
-    let url: URL?
+    var url: URL? {
+        didSet {
+            viewModel.loadImage(from: url) 
+        }
+    }
     let placeholder: Content
     init(url: URL?, @ViewBuilder placeholder: () -> Content) {
         self.url = url
@@ -28,7 +32,10 @@ struct NetworkImage<Content : View> : View {
             }
         }
         .onAppear {
-            if viewModel.imageData == nil { viewModel.loadImage(from: url) }
+            viewModel.loadImage(from: url)
+        }
+        .onChange(of: url) { newValue in
+            viewModel.loadImage(from: newValue)
         }
     }
    

@@ -41,29 +41,22 @@ struct PieChartView: View {
            
             
             VStack {
-                ForEach(data) {item in
-                    HStack {
-//                        Text(item.name)
-                        GeometryReader {g in
-                            HStack {
-                                Spacer(minLength: 0)
-                                Capsule()
-                                    .foregroundColor(item.color)
-                                    .frame(width: isShow2 ? g.size.width * CGFloat(item.percent) : 0, height: 10)
-                                    .animation(.spring(blendDuration: 0.2))
-                                    .onAppear {
-                                        isShow2 = true
-                                    }
-                            }
-                        }.frame(height: 10)
-                        .padding(.horizontal)
-//                        Text(String(format: "%.0f", item.percent * 100) + "%")
+                ZStack{
+                    ForEach(data.indices, id: \.self) {i in
+                        ZStack {
+                            Circle().stroke(data[i].color.opacity(0.8), lineWidth: 15)
+                            Circle()
+                                .trim(from: 0, to: 1 - CGFloat(data[i].percent))
+                                .stroke(data[i].color, style: StrokeStyle(lineWidth: 13, lineCap: .round, lineJoin: .round))
+                                .rotationEffect(.init(degrees: 90))
+                                .shadow(color: Color.black.opacity(0.5), radius: 5, x: 5, y: 5)
+                               
+                        }.padding(CGFloat(i) * 15)
                     }
-                    .padding(.top)
-                }
+                }.frame(width: 50, height: 150)
             }
             .padding(.horizontal)
-            .padding(.vertical, 5)
+            .padding(.vertical, 50)
             Spacer()
             
         }
