@@ -7,38 +7,42 @@
 
 import SwiftUI
 
+struct PagingModel : Identifiable {
+    let url : String
+    var id : String = UUID().uuidString
+}
+
 struct PagingView: View {
-    
-    @State var data : [String] = [
-        "https://picsum.photos/250/340",
-        "https://picsum.photos/250/340",
-        "https://picsum.photos/250/340",
-        "https://picsum.photos/250/340",
-        "https://picsum.photos/250/340",
-        "https://picsum.photos/250/340",
-        "https://picsum.photos/250/340",
-        "https://picsum.photos/250/340",
-        "https://picsum.photos/250/340",
-        "https://picsum.photos/250/340",
-        "https://picsum.photos/250/340",
-        "https://picsum.photos/250/340",
-        "https://picsum.photos/250/340",
-        "https://picsum.photos/250/340",
-        "https://picsum.photos/250/340",
-        "https://picsum.photos/250/340"
+    @State var index : Int = 0
+    @State var data : [PagingModel] = [
+        .init(url: "https://picsum.photos/720/1340?id=1"),
+        .init(url: "https://picsum.photos/720/1340?id=2"),
+        .init(url: "https://picsum.photos/720/1340?id=3"),
+        .init(url: "https://picsum.photos/720/1340?id=4"),
+        .init(url: "https://picsum.photos/720/1340?id=5"),
+        .init(url: "https://picsum.photos/720/1340?id=6"),
+        .init(url: "https://picsum.photos/720/1340?id=7"),
+        .init(url: "https://picsum.photos/720/1340?id=8"),
+        .init(url: "https://picsum.photos/720/1340?id=9"),
+        .init(url: "https://picsum.photos/720/1340?id=10"),
+        .init(url: "https://picsum.photos/720/1340?id=11"),
+        .init(url: "https://picsum.photos/720/1340?id=12"),
+        .init(url: "https://picsum.photos/720/1340?id=13"),
+        .init(url: "https://picsum.photos/720/1340?id=14"),
+        .init(url: "https://picsum.photos/720/1340?id=15"),
     ]
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 20) {
-                ForEach(Array(data.enumerated()), id: \.1) {i in
-                    GeometryReader {geo in
-                        NetworkImage(url: URL(string: "\(i.1)?id=\(UUID().uuidString)"), placeholder: {
+                SnapCarousel(index: $index, item: data) { item in
+                    GeometryReader {proxy in
+                        NetworkImage(url: URL(string: item.url), placeholder: {
                             CardShimmer()
                             
-                        }).cornerRadius(10).rotation3DEffect(.init(degrees: (Double(geo.frame(in: .global).midX) - (UIScreen.main.bounds.width / 2)) / -20), axis: (x: 0, y: 1, z: 0))
-                    }.frame(width: 250, height: 340)
+                        }).frame(width: proxy.size.width)
+                    }
                 }
-            }.padding(.horizontal, (UIScreen.main.bounds.width - 250) / 2)
+            }
         }
     }
 }

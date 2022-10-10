@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8E022E98286E8C2B004BD72C /* waterSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E022E97286E8C2B004BD72C /* waterSliderView.swift */; };
 		8E0B5914288A3DBE00E0FD19 /* CryptoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0B5913288A3DBE00E0FD19 /* CryptoView.swift */; };
+		8E19DBC528AE144200FD9D63 /* SnapCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19DBC428AE144200FD9D63 /* SnapCarousel.swift */; };
 		8E29DAFA285323D900CABE62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E29DAF9285323D900CABE62 /* AppDelegate.swift */; };
 		8E29DAFC285323D900CABE62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E29DAFB285323D900CABE62 /* SceneDelegate.swift */; };
 		8E29DAFE285323D900CABE62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E29DAFD285323D900CABE62 /* ViewController.swift */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		8E022E97286E8C2B004BD72C /* waterSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waterSliderView.swift; sourceTree = "<group>"; };
 		8E0B5913288A3DBE00E0FD19 /* CryptoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoView.swift; sourceTree = "<group>"; };
+		8E19DBC428AE144200FD9D63 /* SnapCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCarousel.swift; sourceTree = "<group>"; };
 		8E29DAF6285323D900CABE62 /* SwiftUIABC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIABC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E29DAF9285323D900CABE62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E29DAFB285323D900CABE62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			children = (
 				8EDD28062887DAC800DE9DF2 /* Spotlight.swift */,
 				8EDD280828892E3300DE9DF2 /* LineGraph.swift */,
+				8E19DBC428AE144200FD9D63 /* SnapCarousel.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				8E29DAFE285323D900CABE62 /* ViewController.swift in Sources */,
 				8E671FBF285C28180039C98B /* extension.swift in Sources */,
 				8E29DAFA285323D900CABE62 /* AppDelegate.swift in Sources */,
+				8E19DBC528AE144200FD9D63 /* SnapCarousel.swift in Sources */,
 				8E0B5914288A3DBE00E0FD19 /* CryptoView.swift in Sources */,
 				8E29DB36285AF9F100CABE62 /* PagingView.swift in Sources */,
 				8E671FC1285C6C550039C98B /* NetworkImage.swift in Sources */,

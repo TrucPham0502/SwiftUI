@@ -41,14 +41,14 @@ class ViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //        let swiftUIView = ContentView() // swiftUIView is View
-        //        let swiftUIControler = UIHostingController(rootView: swiftUIView)
-        //        self.addChild(swiftUIControler)
-        //        swiftUIControler.view.frame = view.bounds
-        //        view.addSubview(swiftUIControler.view)
-        //        swiftUIControler.didMove(toParent: self)
-        //        let deviceId = getUUID()
-        //        print("deviceId: \(deviceId)")
+        let swiftUIView = ContentView() // swiftUIView is View
+        let swiftUIControler = UIHostingController(rootView: swiftUIView)
+        self.addChild(swiftUIControler)
+        swiftUIControler.view.frame = view.bounds
+        view.addSubview(swiftUIControler.view)
+        swiftUIControler.didMove(toParent: self)
+        let deviceId = getUUID()
+        print("deviceId: \(deviceId)")
         
     }
     
@@ -478,7 +478,7 @@ class TPImagesToVideo: NSObject{
     }
 }
 extension UIImage {
-        
+    
     func convertToBuffer() -> CVPixelBuffer? {
         
         let attributes = [
