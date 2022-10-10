@@ -29,6 +29,8 @@
 		8E671FC3286020C80039C98B /* CardShimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E671FC2286020C80039C98B /* CardShimmer.swift */; };
 		8E671FC528604CB10039C98B /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E671FC428604CB10039C98B /* TimerView.swift */; };
 		8E671FC728605B6B0039C98B /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E671FC628605B6B0039C98B /* PieChartView.swift */; };
+		8EAE424E28F3CE06002B0DB2 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE424D28F3CE06002B0DB2 /* CanvasView.swift */; };
+		8EAE425028F3E4B9002B0DB2 /* LayeredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE424F28F3E4B9002B0DB2 /* LayeredButton.swift */; };
 		8EDD28072887DAC800DE9DF2 /* Spotlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD28062887DAC800DE9DF2 /* Spotlight.swift */; };
 		8EDD280928892E3300DE9DF2 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD280828892E3300DE9DF2 /* LineGraph.swift */; };
 /* End PBXBuildFile section */
@@ -77,6 +79,8 @@
 		8E671FC2286020C80039C98B /* CardShimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardShimmer.swift; sourceTree = "<group>"; };
 		8E671FC428604CB10039C98B /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		8E671FC628605B6B0039C98B /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		8EAE424D28F3CE06002B0DB2 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		8EAE424F28F3E4B9002B0DB2 /* LayeredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayeredButton.swift; sourceTree = "<group>"; };
 		8EDD28062887DAC800DE9DF2 /* Spotlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotlight.swift; sourceTree = "<group>"; };
 		8EDD280828892E3300DE9DF2 /* LineGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +178,7 @@
 				8E671FC628605B6B0039C98B /* PieChartView.swift */,
 				8E022E97286E8C2B004BD72C /* waterSliderView.swift */,
 				8E0B5913288A3DBE00E0FD19 /* CryptoView.swift */,
+				8EAE424D28F3CE06002B0DB2 /* CanvasView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 				8EDD28062887DAC800DE9DF2 /* Spotlight.swift */,
 				8EDD280828892E3300DE9DF2 /* LineGraph.swift */,
 				8E19DBC428AE144200FD9D63 /* SnapCarousel.swift */,
+				8EAE424F28F3E4B9002B0DB2 /* LayeredButton.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -334,10 +340,12 @@
 				8EDD280928892E3300DE9DF2 /* LineGraph.swift in Sources */,
 				8E29DB342859BF6F00CABE62 /* HomeView.swift in Sources */,
 				8E29DAFE285323D900CABE62 /* ViewController.swift in Sources */,
+				8EAE424E28F3CE06002B0DB2 /* CanvasView.swift in Sources */,
 				8E671FBF285C28180039C98B /* extension.swift in Sources */,
 				8E29DAFA285323D900CABE62 /* AppDelegate.swift in Sources */,
 				8E19DBC528AE144200FD9D63 /* SnapCarousel.swift in Sources */,
 				8E0B5914288A3DBE00E0FD19 /* CryptoView.swift in Sources */,
+				8EAE425028F3E4B9002B0DB2 /* LayeredButton.swift in Sources */,
 				8E29DB36285AF9F100CABE62 /* PagingView.swift in Sources */,
 				8E671FC1285C6C550039C98B /* NetworkImage.swift in Sources */,
 				8E29DB2A2853244D00CABE62 /* ContentView.swift in Sources */,
