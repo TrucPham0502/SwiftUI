@@ -16,29 +16,30 @@ struct CanvasView: View {
     var body: some View {
         VStack {
             clubbedView()
-        }
+        }.ignoresSafeArea()
     }
     
     @ViewBuilder
     func clubbedView() -> some View {
-        Rectangle().fill(LinearGradient(colors: [.yellow, .orange], startPoint: .top, endPoint: .bottom))
+        Rectangle().fill(LinearGradient(colors: [.black, .black], startPoint: .topLeading, endPoint: .bottomTrailing))
             .mask{
-                TimelineView(.animation(minimumInterval: 3, paused: false)){ _ in
+                TimelineView(.animation(minimumInterval: 2, paused: false)){ _ in
                     Canvas {context, size in
                         context.addFilter(.alphaThreshold(min: 0.5, color: .white))
                         
-                        context.addFilter(.blur(radius: 35))
+                        context.addFilter(.blur(radius: 6))
                         
                         context.drawLayer{ ctx in
-                            for index in 1...15 {
+                            for index in 1...3 {
                                 if let resolvedView = context.resolveSymbol(id: index) {
-                                    ctx.draw(resolvedView, at: .init(x: size.width / 2, y: size.height / 2))
+                                    ctx.draw(resolvedView, at: .init(x: size.width / 2, y: 11 + 18))
                                 }
                             }
                         }
                     } symbols: {
-                        ForEach(1...15, id: \.self) { index in
-                            let offset = startAnimation ? CGSize(width: .random(in: -180...180), height: .random(in: -240...240)) : .zero
+                        clubbedRoundedRectangle(isCircle: false).tag(1)
+                        ForEach(2...3, id: \.self) { index in
+                            let offset = startAnimation ? CGSize(width: .random(in: -180...180), height: .random(in: 0...180)) : .zero
                             clubbedRoundedRectangle(offset: offset).tag(index)
                         }
                     }
@@ -50,11 +51,18 @@ struct CanvasView: View {
         }
     }
     
+    
     @ViewBuilder
-    func clubbedRoundedRectangle(offset : CGSize = .zero) -> some View {
-        RoundedRectangle(cornerRadius: 30, style: .continuous)
-            .fill(.white).frame(width: 120, height: 120).offset(offset)
-            .animation(.easeInOut(duration: 3), value: offset)
+    func clubbedRoundedRectangle(offset : CGSize = .zero, isCircle : Bool = true) -> some View {
+        if isCircle {
+            RoundedRectangle(cornerRadius: 30, style: .continuous)
+                .fill(.white).frame(width: 37, height: 37).offset(offset)
+                .animation(.easeInOut(duration: 2), value: offset)
+
+        }
+        else {
+            Capsule().fill(.black).frame(width: 126, height: 37)
+        }
         
     }
     
@@ -99,6 +107,6 @@ struct CanvasView: View {
 @available(iOS 15.0, *)
 struct Canvas_Previews: PreviewProvider {
     static var previews: some View {
-        CanvasView().preferredColorScheme(.dark)
+        CanvasView()
     }
 }
